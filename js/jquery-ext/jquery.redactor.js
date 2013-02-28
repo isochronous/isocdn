@@ -9,7 +9,7 @@
 
 	Usage: $('#content').redactor();
 */
-function (jQuery) {
+;function (jQuery) {
 
     var rwindow, rdocument;
 
@@ -126,12 +126,12 @@ function (jQuery) {
 
                 lang: 'en',
                 direction: 'ltr', // ltr or rtl
-                
+
                 callback: false, // function
                 keyupCallback: false, // function
                 keydownCallback: false, // function
                 execCommandCallback: false, // function
-                
+
                 // CHANGED: Added this option & set default value to trigger change event on instantiated el
                 onBlurCallback: function () {
                     this.$el.change();
@@ -815,12 +815,12 @@ function (jQuery) {
                     {
                         this.opts.callback(this);
                     }
-                    
+
                     // CHANGED: Hook up an onChangeCallback if provided
                     if (typeof this.opts.onBlurCallback === 'function') {
                         this.$editor.blur($.proxy(this.opts.onBlurCallback, this));
                     }
-                    
+
                     if (this.opts.toolbar !== false)
                     {
                         this.$toolbar.find('a').attr('tabindex', '-1');
